@@ -15,9 +15,9 @@ var app = new Vue ({
             this.userMessage = ''
             console.log (this.items)
         },
-        deleteItem () {
+        deleteItem (index) {
             this.itemsCounter--
-            this.items.splice(this.items.length-1, 1)
+            this.items.splice(index, 1)
         }
     }
 })

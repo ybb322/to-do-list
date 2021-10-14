@@ -63,7 +63,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   height: 35px;
-  font-size: 25px;
+  font-size: 18px;
   background-color: #96e1ee;
   color: #294f5a;
   padding: 10px;
@@ -85,6 +85,15 @@ body {
 .list__item-inner-desc {
   color: grey;
   font-size: 16px;
+}
+
+.list__item .list__remove-item {
+  font-size: 15px;
+  color: white;
+  opacity: 0.7;
+  width: 30px;
+  height: 30px;
+  background-color: darkred;
 }
 
 .list__input-block {
@@ -154,7 +163,7 @@ body {
 
 .list__new-item {
   border: none;
-  font-size: 16px;
+  font-size: 18px;
   background-color: #86e6e1;
   color: #2e5555;
   width: 80px;
@@ -166,7 +175,7 @@ body {
   font-size: 16px;
   background-color: #ff9f9f;
   color: #2e5555;
-  width: 80px;
+  width: 60px;
   height: 50px;
 }
 

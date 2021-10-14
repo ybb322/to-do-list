@@ -14,16 +14,14 @@
         <div class="list__header">{{listTitle}}</div>
         <div class="list__sub-header">{{activeItems}} {{itemsCounter}}</div>
         <ul class="list__items">
-            <li class="list__item" v-for="(item, index) in items">{{index + 1}}. {{item.message}}</li>
+            <li class="list__item" v-for="(item, index) in items">{{index + 1}}. {{item.message}}
+                <button class="list__delete-item" @click="deleteItem(index)">delete</button>
+            </li>
         </ul>
         <div class="list__input-block">
         <input type="text" class="list__name-input" placeholder='Enter your task here' v-model="userMessage">
         <!-- <textarea class="list__desc-input" placeholder="Desc"></textarea> -->
-        <div class="buttons-container">
-            <button class="list__new-item" @click="addItem">add</button>
-            <button class="list__delete-item" @click="deleteItem">delete</button>
-        </div>
-
+        <button class="list__new-item" @click="addItem">add</button>
     </div>
     </div>
 </div>
