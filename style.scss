@@ -1,0 +1,129 @@
+@font-face {
+    font-family: 'heebo';
+    src: url(static/heebo.ttf);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+    height:1000px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list {
+    width:350px;
+    height:800px;
+    background-color: aliceblue;
+    display:flex;
+    flex-direction: column;
+    &__header { 
+        padding:10px;
+        background-color: rgb(51, 100, 102);
+        color:rgb(135, 223, 236);
+        font-size: 24px;
+        font-weight: bold;
+    }
+    &__sub-header {
+        padding:10px;
+        background-color:rgb(170, 205, 211);
+        color:rgb(54, 91, 97);
+        font-size:20px;
+        margin-bottom: 30px;
+    }
+    &__items {
+        list-style: none;
+        padding:0;
+    }
+    &__item {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        height:35px;
+        font-size:25px;
+        background-color: rgb(150, 225, 238);
+        color:rgb(41, 79, 90);
+        padding:10px;
+        margin-bottom: 10px;
+        &-inner{
+            list-style: none;
+            padding:15;
+            text-align: start;
+        &-name{
+            color:black;
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+        &-desc{
+            color:grey;
+            font-size: 16px;
+        }
+    }
+    }
+    &__input-block {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        padding:10px;
+        width:90%;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+    &__name-input {
+        font-family:Arial, Helvetica, sans-serif;
+        padding-left:10px;
+        height:30px;
+        margin-bottom:10px;
+        width:70%;
+        border:none;
+        font-size:20px;
+    }
+    &__desc-input {
+        font-family:Arial, Helvetica, sans-serif;
+        padding-left:10px;
+        height:50px;
+        width:70%;
+        margin-bottom: 20px;
+        border:none;
+        font-size:20px;
+        color:rgb(70, 70, 70);
+    };
+    ::placeholder {
+        font-family:Arial, Helvetica, sans-serif;
+        font-weight: 100;
+        font-size:20px;
+        color:rgb(148, 184, 184);
+    }
+    &__new-item {
+        border:none;
+        font-size: 16px;
+        background-color: rgb(134, 230, 225);
+        color:rgb(46, 85, 85);
+        width:80px;
+        height:50px;
+    }
+    &__delete-item {
+        border:none;
+        font-size: 16px;
+        background-color: rgb(255, 159, 159);
+        color:rgb(46, 85, 85);
+        width:80px;
+        height:50px;
+    }
+}
+
+.list__name-input:focus {
+    outline:none;
+}
+
+.list__desc-input:focus {
+    outline:none;
+}
+
+.list__new-item:focus {
+    outline:none;
+}
+
+.list__name-input:focus::placeholder {
+    color:transparent;
+}
