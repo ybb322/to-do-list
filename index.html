@@ -13,9 +13,19 @@
     <div class="list">
         <div class="list__header">{{listTitle}}</div>
         <div class="list__sub-header">{{activeItems}} {{itemsCounter}}</div>
+        <div class="edit-wrapper">
+        <input type="text" class="list__edit-input" placeholder='Edit...' v-model="editMessage" v-if="changesDisplay">
+</div>
         <ul class="list__items">
             <li class="list__item" v-for="(item, index) in items">{{index + 1}}. {{item.message}}
+                <div class="buttons-wrapper">
+                    <button class="list__edit-item" @click="editItem(index)">edit</button>
+                    <div class="edit-buttons-wrapper" v-if="changesDisplay">
+                        <button class="list__edit-button button-cancel" @click="cancelChanges">cancel changes</button>
+                        <button class="list__edit-button button-save" @click="saveChanges(index)">save changes</button>
+                    </div>
                 <button class="list__delete-item" @click="deleteItem(index)">delete</button>
+            </div>
             </li>
         </ul>
         <div class="list__input-block">

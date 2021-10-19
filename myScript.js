@@ -7,6 +7,9 @@ var app = new Vue ({
         items: [
         ],
         userMessage: '',
+        editMessage: '',
+        activeEditing: true,
+        changesDisplay: false,
     },
     methods: {
         addItem () {
@@ -18,6 +21,22 @@ var app = new Vue ({
         deleteItem (index) {
             this.itemsCounter--
             this.items.splice(index, 1)
+        },
+        editItem (index) {
+
+            this.editMessage = this.items[index].message;
+            if (this.changesDisplay == false) {
+            
+            this.changesDisplay = true; 
+            }
+        },
+        saveChanges (index) {
+            this.items[index].message = this.editMessage;
+            this.changesDisplay = false;
+        },
+        cancelChanges () {
+            this.editMessage = '';
+            this.changesDisplay = false;
         }
     }
 })

@@ -19,7 +19,7 @@ body {
 }
 
 .list {
-  width: 350px;
+  width: 800px;
   height: 800px;
   background-color: aliceblue;
   display: -webkit-box;
@@ -176,7 +176,97 @@ body {
   background-color: #ff9f9f;
   color: #2e5555;
   width: 60px;
-  height: 50px;
+  height: 40px;
+}
+
+.list__edit-item {
+  border: none;
+  font-size: 16px;
+  background-color: #c2fdff;
+  color: #2e5555;
+  width: 60px;
+  height: 40px;
+}
+
+.list__edit-button {
+  border: none;
+  font-size: 12px;
+  background-color: #c2fdff;
+  color: #2e5555;
+  width: 60px;
+  height: 40px;
+}
+
+.button-save {
+  background-color: #4ee9a1;
+  font-weight: bold;
+  color: #054e4e;
+}
+
+.button-cancel {
+  background-color: #ff7373;
+  font-weight: bold;
+  color: #054e4e;
+}
+
+.buttons-wrapper {
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.list__edit-input {
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 10px;
+  height: 30px;
+  margin-bottom: 10px;
+  width: 50%;
+  border: none;
+  font-size: 20px;
+}
+
+.item-transition-fade-enter-active {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.item-transition-leave-active {
+  -webkit-transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.edit-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.edit-buttons-wrapper {
+  width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-item-align: end;
+      align-self: end;
 }
 
 .list__name-input:focus {
